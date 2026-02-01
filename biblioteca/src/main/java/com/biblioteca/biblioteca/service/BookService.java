@@ -42,6 +42,7 @@ public class BookService {
         book.setId(UUID.randomUUID().toString()); 
         //Ponemos la fecha actual
         book.setLdt(LocalDateTime.now());
+        book.setIsRead(false);
         books.add(book);
         return book;
     }
@@ -65,7 +66,7 @@ public class BookService {
     public Book toggleRead(String id) {
         Book book = getById(id);
         if (book != null) {
-        	book.setRead( !book.isRead() ); 
+        	book.setIsRead( !book.getIsRead() ); 
             return book;
         }
         return null;

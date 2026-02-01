@@ -15,6 +15,6 @@ public class Book {
 	private String id;
 	private String title;
 	private String author;
-	private boolean isRead;
+	private Boolean isRead = false;
 	private LocalDateTime ldt;
 }
